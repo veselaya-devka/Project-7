@@ -234,14 +234,15 @@ header,
   align-items: flex-end;
 }
 
+.aside-head .logo a {
+  padding-left: 10px;
+}
 
 nav ul {
   display: flex;
   flex-direction: row;
   gap: 81px;
 }
-
-nav ul li {}
 
 nav ul li a {
   font-family: var(--second-family-700);
@@ -302,5 +303,15 @@ nav ul li a {
 
   .menu-checkbox:checked~.aside {
     right: 44%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  aside {
+    width: 100%;
+  }
+
+  .menu-checkbox:checked~.aside {
+    right: 0%;
   }
 }
