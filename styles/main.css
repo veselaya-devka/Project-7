@@ -85,6 +85,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 h2 {
@@ -466,11 +467,78 @@ nav ul li a {
   font-size: 18px;
 }
 
+.testimonial {}
+
+.testimonial>div {
+  padding-left: 98px;
+  padding-right: 92px;
+}
+
+.testimonial h2 {
+  text-align: center;
+  margin-top: 89px;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-direction: row;
+  margin-top: 74px;
+  column-gap: 9.6%;
+  row-gap: 50px;
+  flex-wrap: wrap;
+}
+
+.testimonial-cards .card {
+  display: flex;
+  flex-direction: row;
+  max-width: 544px;
+}
+
+.testimonial-cards .card img {
+  margin-right: 27px;
+  max-width: 151px;
+  height: auto;
+  object-fit: contain;
+}
+
+.testimonial-cards .card:nth-child(2) img {
+  margin-right: 20px;
+}
+
+.testimonial-card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
 
 
 
+.testimonial-card-text .name {
+  font-family: var(--font-family-700);
+  font-size: clamp(1.313rem, 0.783vw + 0.81rem, 1.75rem);
+}
 
+.testimonial-card-text p {
+  font-family: var(--font-family-400);
+  font-size: clamp(1rem, 0.112vw + 0.928rem, 1.063rem);
+}
 
+.testimonial-cards .card:nth-child(1) p
+
+/* ,
+.testimonial-cards .card:nth-child(1) .name */
+  {
+  width: 84%;
+}
+
+.testimonial-cards .card:nth-child(2) p
+
+/* ,
+.testimonial-cards .card:nth-child(2) .name */
+  {
+  width: 83%;
+}
 
 
 
@@ -489,6 +557,17 @@ nav ul li a {
 
   .our-projects-cards .card img {
     width: clamp(21.25rem, 37.296vw - 1.151rem, 31.25rem);
+  }
+}
+
+@media screen and (max-width: 1408px) {
+  .testimonial-cards {
+    justify-content: center;
+    justify-content: center;
+  }
+
+  .testimonial-cards .card:nth-child(2) img {
+    margin-right: 27px;
   }
 }
 
@@ -567,6 +646,13 @@ nav ul li a {
     right: 44%;
   }
 
+  .testimonial-cards .card img {
+    max-width: 20%;
+  }
+
+  .testimonial-cards p {
+    width: 100% !important;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -576,5 +662,9 @@ nav ul li a {
 
   .menu-checkbox:checked~.aside {
     right: 0%;
+  }
+
+  .testimonial-cards .card img {
+    max-width: 32%;
   }
 }
