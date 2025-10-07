@@ -229,17 +229,21 @@ ul li {
   font-size: 42px;
 }
 
-header,
+.aside-head {
+  padding: 47px 0 47px 93px;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+header>div,
 .aside-head {
   display: flex;
-  flex-direction: row;
-  padding: 47px 93px;
-  justify-content: space-between;
   align-items: flex-end;
 }
 
 header {
-  padding-bottom: 88px;
+  padding: 47px 93px 88px;
 }
 
 .aside-head .logo a {
@@ -275,7 +279,7 @@ nav ul li a {
   cursor: pointer;
 }
 
-.first-slide {
+.first-slide>div {
   height: clamp(40.875rem, 8.054vw + 35.711rem, 45.375rem);
   width: 100%;
   display: flex;
@@ -332,25 +336,32 @@ nav ul li a {
 .services_block {
   display: flex;
   flex-direction: row;
-  padding: 0 11.3%;
-  justify-content: space-between;
+  padding: 0 21.2%;
+  column-gap: 268px;
+  row-gap: 150px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .service {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 17%;
+  width: 187px;
 }
 
 .service-image {
-  height: 103px;
+  aspect-ratio: 1 / 1;
   width: 103px;
   border-radius: 100%;
   background-color: #254d4d;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.service-image img {
+  object-fit: contain;
 }
 
 .service h3 {
