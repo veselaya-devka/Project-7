@@ -92,6 +92,10 @@ h2 {
   font-size: 51px;
 }
 
+p {
+  font-family: var(--font-family-400);
+}
+
 *,
 *::before,
 *::after {
@@ -200,7 +204,6 @@ input:focus {
   max-width: 1418px;
   width: 100%;
   margin: 0 auto;
-  /* padding: 0 93px; */
 }
 
 a {
@@ -240,6 +243,10 @@ header>div,
 .aside-head {
   display: flex;
   align-items: flex-end;
+}
+
+header>div {
+  padding: 0 93px;
 }
 
 header {
@@ -370,7 +377,6 @@ nav ul li a {
 }
 
 .service p {
-  font-family: var(--font-family-400);
   font-size: 16px;
   text-align: center;
   margin-top: 6px;
@@ -384,14 +390,11 @@ nav ul li a {
   padding-right: 64px;
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   column-gap: 85px;
   row-gap: 30px;
 }
 
 .about-us img {
-  /* width: auto;
-  height: 562px; */
   max-width: 57.5%;
   height: auto;
 }
@@ -408,12 +411,10 @@ nav ul li a {
 }
 
 .about-us-text h2 {
-  font-family: var(--font-family-900);
   font-size: clamp(1.938rem, 2.237vw + 0.503rem, 3.188rem);
 }
 
 .about-us-text p {
-  font-family: var(--font-family-400);
   font-size: clamp(1.188rem, 1.342vw + 0.327rem, 1.938rem);
   line-height: 1.55;
 }
@@ -427,6 +428,41 @@ nav ul li a {
   cursor: pointer;
 }
 
+.our-projects>div {
+  padding-left: 91px;
+  padding-right: 91px;
+}
+
+.our-projects h2 {
+  margin-top: 95px;
+  margin-bottom: 68px;
+}
+
+.our-projects-cards {
+  display: grid;
+  grid-template-columns: repeat(3, fit-content(100%));
+  grid-row-gap: 91px;
+  grid-column-gap: 89px;
+  justify-content: space-between;
+}
+
+.our-projects-cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+
+.our-projects-cards .card img {
+  width: 340px;
+  height: auto;
+}
+
+.our-projects-cards .card p {
+  width: 50%;
+  text-align: center;
+  margin-top: 10px;
+}
 
 
 
@@ -444,8 +480,15 @@ nav ul li a {
 
 
 
+@media screen and (max-width: 1390px) {
+  .our-projects-cards {
+    grid-template-columns: repeat(2, fit-content(100%));
+  }
 
-
+  .our-projects-cards .card img {
+    width: clamp(21.25rem, 37.296vw - 1.151rem, 31.25rem);
+  }
+}
 
 @media screen and (max-width: 1300px) {
   .about-us>div {
@@ -475,6 +518,26 @@ nav ul li a {
 
   .search {
     margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .our-projects>div {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .our-projects h2 {
+    text-align: center;
+  }
+
+  .our-projects-cards {
+    grid-template-columns: repeat(1, fit-content(100%));
+    justify-content: center;
+  }
+
+  .our-projects-cards .card img {
+    width: clamp(21.25rem, 25.806vw + 15.766rem, 31.25rem);
   }
 }
 
