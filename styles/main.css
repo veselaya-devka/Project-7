@@ -416,7 +416,7 @@ nav ul li a {
 
 .about-us-text p {
   font-size: clamp(1.188rem, 1.342vw + 0.327rem, 1.938rem);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 .about-us-text button {
@@ -426,11 +426,12 @@ nav ul li a {
   background-color: white;
   line-height: 1.8;
   cursor: pointer;
+  margin-bottom: 5px;
 }
 
 .our-projects>div {
-  padding-left: 91px;
-  padding-right: 91px;
+  padding-left: 97px;
+  padding-right: 98px;
 }
 
 .our-projects h2 {
@@ -441,7 +442,7 @@ nav ul li a {
 .our-projects-cards {
   display: grid;
   grid-template-columns: repeat(3, fit-content(100%));
-  grid-row-gap: 91px;
+  grid-row-gap: 84px;
   grid-column-gap: 89px;
   justify-content: space-between;
 }
@@ -459,9 +460,10 @@ nav ul li a {
 }
 
 .our-projects-cards .card p {
-  width: 50%;
+  width: 54%;
   text-align: center;
   margin-top: 10px;
+  font-size: 18px;
 }
 
 
@@ -508,10 +510,6 @@ nav ul li a {
 }
 
 @media screen and (max-width: 992px) {
-  .container {
-    /* padding: 0 40px; */
-  }
-
   nav ul {
     gap: 20px;
   }
