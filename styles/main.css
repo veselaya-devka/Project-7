@@ -376,6 +376,56 @@ nav ul li a {
   margin-top: 6px;
 }
 
+.about-us {}
+
+.about-us>div {
+  padding-top: 76px;
+  padding-left: 100px;
+  padding-right: 64px;
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  column-gap: 85px;
+  row-gap: 30px;
+}
+
+.about-us img {
+  /* width: auto;
+  height: 562px; */
+  max-width: 57.5%;
+  height: auto;
+}
+
+
+
+.about-us-text {
+  padding-bottom: 31px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+}
+
+.about-us-text h2 {
+  font-family: var(--font-family-900);
+  font-size: clamp(1.938rem, 2.237vw + 0.503rem, 3.188rem);
+}
+
+.about-us-text p {
+  font-family: var(--font-family-400);
+  font-size: clamp(1.188rem, 1.342vw + 0.327rem, 1.938rem);
+  line-height: 1.55;
+}
+
+.about-us-text button {
+  font-family: var(--second-family-600);
+  font-size: clamp(1.063rem, 0.783vw + 0.56rem, 1.5rem);
+  border: none;
+  background-color: white;
+  line-height: 1.8;
+  cursor: pointer;
+}
 
 
 
@@ -397,8 +447,22 @@ nav ul li a {
 
 
 
+@media screen and (max-width: 1300px) {
+  .about-us>div {
+    flex-wrap: wrap;
+    padding-left: 64px;
+  }
 
+  .about-us img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 
+  .about-us-text {
+    max-width: 735px;
+    margin: 0 auto;
+  }
+}
 
 @media screen and (max-width: 992px) {
   .container {
