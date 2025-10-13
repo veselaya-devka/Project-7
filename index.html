@@ -19,15 +19,18 @@
       <div class="spacer"></div>
       <nav>
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="" class="dark">Home</a></li>
+          <li><a href="#projects" class="dark">Projects</a></li>
+          <li><a href="#about" class="dark">About</a></li>
+          <li><a href="" class="dark">Contact</a></li>
         </ul>
       </nav>
-      <div class="search">
-        <img src="img/search.svg" alt="search">
-      </div>
+      <form action="" class="header-form">
+        <input type="text" placeholder="Enter any text" class="header-input" name="header-input">
+        <button class="header-button">Search</button>
+      </form>
+      <button class="search">
+      </button>
       <label for="menuToggle" class="menu-button-open"></label>
     </div>
   </header>
@@ -82,7 +85,7 @@
             aliquam, purus sit amet luctus
             venenatis, lectus magna fringilla
             urna, porttitor</p>
-          <button>Read more</button>
+          <button class="dark">Read more</button>
         </div>
       </div>
     </section>
@@ -190,16 +193,43 @@
       <label for="menuToggle" class="aside-close-menu"></label>
     </div>
     <ul class="aside-ul">
-      <li><a href="">Home</a></li>
-      <li><a href="">Projects</a></li>
-      <li><a href="">About</a></li>
-      <li><a href="">Contact</a></li>
+      <li><a href="" class="aside-a">Home</a></li>
+      <li><a href="" class="aside-a">Projects</a></li>
+      <li><a href="" class="aside-a">About</a></li>
+      <li><a href="" class="aside-a">Contact</a></li>
     </ul>
     <form action="" class="aside-form">
-      <input type="text" placeholder="Enter any text" class="aside-input">
+      <input type="text" placeholder="Enter any text" class="aside-input" name="aside-input">
       <button class="aside-button">Search</button>
     </form>
   </aside>
+  <script>
+    const button = document.querySelector('.search');
+    const nav = document.querySelector('nav');
+    const form = document.querySelector('.header-form');
+
+    button.addEventListener('click', function () {
+      if (this.classList.contains('search')) {
+        // Open form
+        nav.style.display = 'none';
+        form.style.display = 'flex';
+        this.setAttribute("class", "close-form");
+
+        setTimeout(() => {
+          form.classList.add('show');
+        }, 10);
+      } else {
+        // Close form
+        form.classList.remove('show');
+
+        setTimeout(() => {
+          form.style.display = 'none';
+          nav.style.display = 'flex';
+          this.setAttribute("class", "search");
+        }, 300);
+      }
+    });
+  </script>
 </body>
 
 </html>
